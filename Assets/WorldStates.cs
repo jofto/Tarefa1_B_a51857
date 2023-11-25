@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+//make the dictionary elements their own serializable class
+//so we can edit them in the inspector
 [System.Serializable]
 public class WorldState {
 
@@ -50,7 +52,7 @@ public class WorldStates {
     }
 
     // Method to remove a state
-    private void RemoveState(string key) {
+    public void RemoveState(string key) {
 
         // Check if it frist exists
         if (HasState(key)) {
